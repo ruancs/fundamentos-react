@@ -1,17 +1,56 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom"
+import React from "react"
+import './index.css'
+import Cu from './components/basicos/Primeiro'
+import ComParametro from "./components/basicos/ComParametro"
+import Fragmento from "./components/basicos/Fragmento"
+import Aleatorio from "./components/basicos/Aleatorio"
+import Card from "./components/Layout/Card"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+ReactDOM.render(
+    
+    
+    <div id="root">
+
+      <h1>Fundamentos React</h1>
+
+      <div className="Cards">
+
+        <Card titulo="Desafio Aleatório">
+          <Aleatorio min = {1} max = {50}/>
+        </Card>
+
+        <Card titulo="Desafio Aleatório">
+          <Aleatorio min = {1} max = {10}/>
+        </Card>
+
+        <Card titulo="Primeiro componente">
+          <Cu/>
+        </Card>
+
+        <Card titulo="Segundo Componente - Com Parâmetro">
+
+          <ComParametro
+          titulo="Segundo componente"
+          subtitulo="subtitulo do segundo componente"
+          />
+        </Card>
+
+        <Card titulo="Fragmento">
+          <Fragmento/>
+        </Card>
+
+      </div>
+
+        
+
+        
+
+       
+
+    </div>,
+    document.getElementById('root')
+ 
+)
